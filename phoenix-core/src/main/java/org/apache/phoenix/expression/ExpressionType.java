@@ -42,6 +42,8 @@ import org.apache.phoenix.expression.function.FloorFunction;
 import org.apache.phoenix.expression.function.IndexStateNameFunction;
 import org.apache.phoenix.expression.function.InlineArrayElemRefExpression;
 import org.apache.phoenix.expression.function.InvertFunction;
+import org.apache.phoenix.expression.function.HllEstimateFunction;
+import org.apache.phoenix.expression.function.HllUnionFunction;
 import org.apache.phoenix.expression.function.LTrimFunction;
 import org.apache.phoenix.expression.function.LastValueFunction;
 import org.apache.phoenix.expression.function.LengthFunction;
@@ -93,6 +95,8 @@ import com.google.common.collect.Maps;
 // Important : When you want to add new Types make sure to add those towards the end, not changing the existing type's
 // ordinal
 public enum ExpressionType {
+    HllEstimateFunction(HllEstimateFunction.class),
+    HllUnionFunction(HllUnionFunction.class),
     ReverseFunction(ReverseFunction.class),
     RowKey(RowKeyColumnExpression.class),
     KeyValue(KeyValueColumnExpression.class),

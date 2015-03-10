@@ -260,6 +260,10 @@
       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.twitter</groupId>
+      <artifactId>algebird-core_${scala.major.version}</artifactId>
+    </dependency>
     <!-- Findbugs Annotation -->
     <dependency>
       <groupId>net.sourceforge.findbugs</groupId>

@@ -677,4 +677,13 @@ public class QueryParserTest {
                 new StringReader("select * from date_test where d in (to_date('2013-11-04 09:12:00'))"));
         parser.parseStatement();
     }
+
+    @Test
+    public void testHllFunctions() throws Exception {
+        SQLParser parser = new SQLParser(
+                new StringReader(
+                        "select HLL_LONG(HLL_UNION(hll_varbinary)) from hll_test " +
+                                "where HLL_LONG(HLL_UNION(hll_varbinary)) > 10"));
+        parser.parseStatement();
+    }
 }
